@@ -2,10 +2,23 @@
 
 ## How it's works?
 
-1. [Register your template.][register]
+1. [Register your template.][register] Please fill up the issue template so humans can
+review it better in case automation went broken.
 2. Complete the prompts, like accepting the org invite and optionally transferring your repo into here.
+If automation/GitHub Actions is struggling on handling issues, please [see this document](.github/NEW_TEMPLATE_REGISTRATION_PROMPT.md)
 3. Reply `@RecapTimeBot register owner/repo` (replacing `owner/repo` with your repo link without `https://github.com/`
 path) so we can automatically add your repo into the registry.
+
+[register]: https://cdrs-deploy.repohubdev.tk/register
+
+### Terms and conditions
+
+* By transferring your `code-server` template repo into this org, you agree to adopt our
+[Community Code of Conduct](CODE_OF_CONDUCT.md). Your copyright will still be owned by you,
+just assigning additional people (contributors are included by default).
+* Your Dockerfiles and any bootstrapper scripts should be not includes anything related to
+crypto-mining, platform/service abuse, and scripts/software that may have illegal content
+(pirating and NSFW).
 
 ## Available commands
 
@@ -23,7 +36,7 @@ containing 3 words, seperated by dashes (e.g. `require-build-confrim`) but you c
 
 **Example invocation**:
 
-```md
+```markdown
 @RecapTimeBot register cdr/deploy-code-server
 ```
 
@@ -39,7 +52,7 @@ to themselves and resolve the issue in case The Pins Team members are not availa
 
 **Example invocation**:
 
-```md
+```markdown
 <!-- This doesn't work because it's belong into @code-server-boilerplates,
      and requires further assistance from org maintainers. -->
 @RecapTimeBot unregister code-server-boilerplates/starter-pack
@@ -56,7 +69,7 @@ into an GitHub org.
 
 **Example invocation**:
 
-```md
+```markdown
 @RecapTimeBot update bcmpt/deploy-code-server cdr/deploy-code-server
 ```
 
@@ -70,10 +83,10 @@ falls back to ussing slug generator.
 
 **Example invocation**:
 
-```md
+```markdown
 <!-- Request an slug change with user-defined slug -->
 @RecapTimeBot request-new-slug ThePinsTeam/deploy-code-server cdrs-internal-thepinsteam
 
-<!-- Or probably let use do the work for you.-->
+<!-- Or probably let use do the work for you. -->
 @RecapTimeBot request-new-slug code-server-boilerplates/nodejs-rust-mix
 ```
