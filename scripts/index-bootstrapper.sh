@@ -13,23 +13,26 @@ download_script(){
     echo
     echo "Otherwise, report CI errors using this link instead:"
     echo
-    echo "   https://cdrs-deploy.repohubdev.tk/source/+fileabug"
+    echo "   https://cdrs-deploy.repohubdev.tk/source/+fileabug/?template=ci-build-errors"
     echo
   else
-    echo "Success!"
+    echo "Successfully downloaded install script as $PWD/src/scripts/$1"
   fi
   echo "--------------------------------------------------"  echo
 }
 
 # https://github.com/cdr/deploy-code-server
 download_script "deploy-code-server-upstream" "cdr/deploy-code-server" main "deploy-vm/launch-code-server.sh"
+chmod +x src/scripts/deploy-code-server-upstream
 sleep 3
 
 # https://github.com/code-server-boilerplates/starter-pack
 download_script "example-project" "code-server-boilerplates/starter-pack" main toolkits/virtual-machines/bootstrapper
+chmod +x src/scripts/example-project
 sleep 3
 
 ### template - start ###
 #download_script slug-here "owner/repo" branch path/to/bootstrapper-file
+#chmod +x src/scripts/slug-here
 #sleep 3
 ### template - end ###
