@@ -31,6 +31,11 @@ download_script "example-project" "code-server-boilerplates/starter-pack" main t
 chmod +x src/scripts/example-project
 sleep 3
 
+#
+download_script "thepinsteam-internal" "ThePinsTeam/deploy-code-server" main "deploy-vm/launch-code-server.sh"
+chmod +x src/scripts/deploy-code-server-upstream
+sleep 3
+
 ### template - start ###
 #download_script slug-here "owner/repo" branch path/to/bootstrapper-file
 #chmod +x src/scripts/slug-here
