@@ -1,12 +1,20 @@
 # Template registry for Code Server deployment template repos
 
+## File Structure
+
+```
+.
+├── meta - Index of registered repos in YAML
+└── scripts - Scripts for CI and stuff
+```
+
 ## How it's works?
 
 1. [Register your template.][register] Please fill up the issue template so humans can
 review it better in case automation went broken.
 2. Complete the prompts, like accepting the org invite and optionally transferring your repo into here.
 If automation/GitHub Actions is struggling on handling issues, please [see this document](.github/NEW_TEMPLATE_REGISTRATION_PROMPT.md)
-3. Reply `@RecapTimeBot register owner/repo` (replacing `owner/repo` with your repo link without `https://github.com/`
+3. Reply `/register owner/repo` (replacing `owner/repo` with your repo link without `https://github.com/`
 path) so we can automatically add your repo into the registry.
 
 [register]: https://cdrs-deploy.repohubdev.tk/register
@@ -23,8 +31,8 @@ crypto-mining, platform/service abuse, and scripts/software that may have illega
 ## Available commands
 
 You must be the issue author for these commands to work, otherwise the bot will
-delete the command you sent to avoid spam. Remember to prefix commands with `@RecapTimeBot`
-followed by an space. You cannot use these commands in the issue description, yet.
+delete the command you sent to avoid spam. Remember to prefix commands with `/`
+followed by an space. ~~You cannot use these commands in the issue description, yet.~~ (We're working on an Probot GitHub app for that.)
 
 ### `register`
 
@@ -37,7 +45,7 @@ containing 3 words, seperated by dashes (e.g. `require-build-confrim`) but you c
 **Example invocation**:
 
 ```markdown
-@RecapTimeBot register cdr/deploy-code-server
+/register cdr/deploy-code-server
 ```
 
 ### `unregister`
@@ -48,14 +56,14 @@ assigned to [Andrei Jiroh](https://github.com/AndreiJirohHaliliDev2006) but any 
 `@code-server-boilerplates/maintainers` and `@code-server-boilerplates/contributors` can assign
 to themselves and resolve the issue in case The Pins Team members are not available within 14 days.
 
-**Arguments**: `owner/repo` (required)
+**Arguments**: `owner/repo|slug`
 
 **Example invocation**:
 
 ```markdown
 <!-- This doesn't work because it's belong into @code-server-boilerplates,
      and requires further assistance from org maintainers. -->
-@RecapTimeBot unregister code-server-boilerplates/starter-pack
+/unregister code-server-boilerplates/starter-pack
 ```
 
 ### `update`
@@ -70,10 +78,10 @@ into an GitHub org.
 **Example invocation**:
 
 ```markdown
-@RecapTimeBot update bcmpt/deploy-code-server cdr/deploy-code-server
+/update bcmpt/deploy-code-server cdr/deploy-code-server
 ```
 
-### `request-new-slug`
+### `request-slug`
 
 **Description**: Old slugs, including generated ones, are still active up to the day you unregister it from the registry.
 Remember that these are reviewed by an human, so be patient. If `owner/repo` or `slug-name` is only provided, automagically
@@ -85,8 +93,9 @@ falls back to ussing slug generator.
 
 ```markdown
 <!-- Request an slug change with user-defined slug -->
-@RecapTimeBot request-new-slug ThePinsTeam/deploy-code-server cdrs-internal-thepinsteam
+/request-slug ThePinsTeam/deploy-code-server cdrs-internal-thepinsteam
 
 <!-- Or probably let use do the work for you. -->
-@RecapTimeBot request-new-slug code-server-boilerplates/nodejs-rust-mix
+/request-slug code-server-boilerplates/nodejs-rust-mix
 ```
+
