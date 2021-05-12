@@ -1,0 +1,11 @@
+name: "Official code-server Deployment Repo"
+owner: cdr
+repo: deploy-code-server
+aliases:
+  - deploy-code-server
+  - upstream
+verifiedBadge:
+  isOfficial: true
+  reason: "Maintained by Coder team"
+maintainer: "gh-org:cdr"
+isArchived: false

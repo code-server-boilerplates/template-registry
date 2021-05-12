@@ -1,0 +1,10 @@
+name: "Example Project / Starter Pack"
+owner: code-server-boilerplates
+repo: starter-pack
+aliases:
+  - starter-pack
+verifiedBadge:
+  isOfficial: true
+  reason: "Maintained by The Pins Team"
+maintainer: AndreiJirohHaliliDev2006
+isArchived: false
