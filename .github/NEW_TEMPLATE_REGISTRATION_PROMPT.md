@@ -14,7 +14,7 @@ be active.
 Reply with `@RecapTimeBot register owner/repo` where `owner/repo` is your
 GitHub repo link with the `https://github.com/` part.
 
-That command will automatically generate an new issue in the [cdrs-deploy repo](https://github.com/code-server-boilerplates/cdrs-deploy.repohubdev.tk/issues) 
+That command will automatically generate an new issue in the [cdrs-deploy repo](https://github.com/code-server-boilerplates/cdrs-deploy.repohubdev.tk/issues)
 for you.
 
 </details>
