@@ -1,0 +1,12 @@
+name: "Starter Pack-as-Base Image / Kubernetes Cluster Management"
+owner: code-server-boilerplates
+repo: starter-pack-as-base-image
+aliases:
+  - starter-pack
+  - okteto-cli
+  - helm-charts-dev
+verifiedBadge:
+  isOfficial: true
+  reason: "Maintained by The Pins Team"
+maintainer: AndreiJirohHaliliDev2006
+isArchived: false
