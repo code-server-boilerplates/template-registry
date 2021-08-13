@@ -1,5 +1,8 @@
 # Template registry for Code Server deployment template repos
 
+This repository holds the metadata for Code Server starter repos, which will be rendered as an
+static page in the future.
+
 ## File Structure
 
 ```
@@ -8,7 +11,7 @@
 └── scripts - Scripts for CI and stuff
 ```
 
-## How it's works?
+## Registration Process
 
 1. [Register your template.][register] Please fill up the issue template so humans can
 review it better in case automation went broken.
